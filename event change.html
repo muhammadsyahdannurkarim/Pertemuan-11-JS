@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event change</title>
+</head>
+<body>
+    <div id="output"></div>
+    <label for="mobil">pilih mobil : </label>
+    <select name="buah" id="buah">
+        <option>avanza</option>
+        <option>senia</option>
+        <option>portuner</option>
+        <option>pazero</option>
+        <option>alphart</option>
+    </select>
+</body>
+<script>
+    const buah = document.getElementById('buah');
+    const info = document.getElementById('output');
+
+    buah.addEventListener('change', function(e){
+        info.innerText = `pilihan anda adalah : ${e.target.value}`;
+    });
+</script>
+</html>
